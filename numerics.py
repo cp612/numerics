@@ -166,7 +166,7 @@ def advect(final_time, nx,nt, u, scheme='FTBS', alpha=0.05,use_square=True):
     # Courant number
     C=u*(dt/dx)
     
-    # phi for analaytical
+    # phi for analytical
     phi0 = initial_condition(x,use_square)
     # phi for numerical
     phiOld = phi0.copy()
@@ -335,4 +335,5 @@ def convergence_test(scheme, alpha_value=0):
     
     print(f"\nEstimated order of accuracy for {scheme}: {abs(order_est):.4f}")
     return errors,order_est
+
 
